@@ -29,63 +29,124 @@
         private void InitializeComponent()
         {
             this.btn_Register = new System.Windows.Forms.Button();
-            this.textBox2_Password = new System.Windows.Forms.TextBox();
-            this.label2_Password = new System.Windows.Forms.Label();
-            this.textBox1_Username = new System.Windows.Forms.TextBox();
-            this.label1_Username = new System.Windows.Forms.Label();
+            this.txtLastname = new System.Windows.Forms.TextBox();
+            this.lblLastname = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtNickname = new System.Windows.Forms.TextBox();
+            this.lblNickname = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Register
             // 
-            this.btn_Register.Location = new System.Drawing.Point(145, 299);
+            this.btn_Register.Location = new System.Drawing.Point(134, 358);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(198, 38);
             this.btn_Register.TabIndex = 11;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
-            // textBox2_Password
+            // txtLastname
             // 
-            this.textBox2_Password.Location = new System.Drawing.Point(217, 199);
-            this.textBox2_Password.Name = "textBox2_Password";
-            this.textBox2_Password.Size = new System.Drawing.Size(126, 27);
-            this.textBox2_Password.TabIndex = 9;
+            this.txtLastname.Location = new System.Drawing.Point(218, 177);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(126, 27);
+            this.txtLastname.TabIndex = 9;
             // 
-            // label2_Password
+            // lblLastname
             // 
-            this.label2_Password.AutoSize = true;
-            this.label2_Password.Location = new System.Drawing.Point(134, 199);
-            this.label2_Password.Name = "label2_Password";
-            this.label2_Password.Size = new System.Drawing.Size(77, 20);
-            this.label2_Password.TabIndex = 8;
-            this.label2_Password.Text = "Password :";
+            this.lblLastname.AutoSize = true;
+            this.lblLastname.Location = new System.Drawing.Point(131, 180);
+            this.lblLastname.Name = "lblLastname";
+            this.lblLastname.Size = new System.Drawing.Size(79, 20);
+            this.lblLastname.TabIndex = 8;
+            this.lblLastname.Text = "Lastname :";
             // 
-            // textBox1_Username
+            // txtName
             // 
-            this.textBox1_Username.Location = new System.Drawing.Point(217, 144);
-            this.textBox1_Username.Name = "textBox1_Username";
-            this.textBox1_Username.Size = new System.Drawing.Size(125, 27);
-            this.textBox1_Username.TabIndex = 7;
+            this.txtName.Location = new System.Drawing.Point(218, 144);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(126, 27);
+            this.txtName.TabIndex = 7;
             // 
-            // label1_Username
+            // lblName
             // 
-            this.label1_Username.AutoSize = true;
-            this.label1_Username.Location = new System.Drawing.Point(129, 147);
-            this.label1_Username.Name = "label1_Username";
-            this.label1_Username.Size = new System.Drawing.Size(82, 20);
-            this.label1_Username.TabIndex = 6;
-            this.label1_Username.Text = "Username :";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(131, 147);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(56, 20);
+            this.lblName.TabIndex = 6;
+            this.lblName.Text = "Name :";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(218, 243);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(126, 27);
+            this.txtPassword.TabIndex = 15;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(131, 243);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(77, 20);
+            this.lblPassword.TabIndex = 14;
+            this.lblPassword.Text = "Password :";
+            // 
+            // txtNickname
+            // 
+            this.txtNickname.Location = new System.Drawing.Point(218, 210);
+            this.txtNickname.Name = "txtNickname";
+            this.txtNickname.Size = new System.Drawing.Size(126, 27);
+            this.txtNickname.TabIndex = 13;
+            // 
+            // lblNickname
+            // 
+            this.lblNickname.AutoSize = true;
+            this.lblNickname.Location = new System.Drawing.Point(131, 213);
+            this.lblNickname.Name = "lblNickname";
+            this.lblNickname.Size = new System.Drawing.Size(82, 20);
+            this.lblNickname.TabIndex = 12;
+            this.lblNickname.Text = "Nickname :";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(218, 276);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(126, 27);
+            this.txtEmail.TabIndex = 17;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(131, 279);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(59, 20);
+            this.lblEmail.TabIndex = 16;
+            this.lblEmail.Text = "E-mail :";
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 465);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtNickname);
+            this.Controls.Add(this.lblNickname);
             this.Controls.Add(this.btn_Register);
-            this.Controls.Add(this.textBox2_Password);
-            this.Controls.Add(this.label2_Password);
-            this.Controls.Add(this.textBox1_Username);
-            this.Controls.Add(this.label1_Username);
+            this.Controls.Add(this.txtLastname);
+            this.Controls.Add(this.lblLastname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
             this.Name = "Form3";
             this.Text = "Form3";
             this.ResumeLayout(false);
@@ -96,9 +157,15 @@
         #endregion
 
         private Button btn_Register;
-        private TextBox textBox2_Password;
-        private Label label2_Password;
-        private TextBox textBox1_Username;
-        private Label label1_Username;
+        private TextBox txtLastname;
+        private Label lblLastname;
+        private TextBox txtName;
+        private Label lblName;
+        private TextBox txtPassword;
+        private Label lblPassword;
+        private TextBox txtNickname;
+        private Label lblNickname;
+        private TextBox txtEmail;
+        private Label lblEmail;
     }
 }
