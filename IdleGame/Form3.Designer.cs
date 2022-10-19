@@ -1,6 +1,6 @@
 ﻿namespace IdleGame
 {
-    partial class Form3
+    partial class FrmRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -131,7 +131,7 @@
             this.lblEmail.TabIndex = 16;
             this.lblEmail.Text = "E-mail :";
             // 
-            // Form3
+            // FrmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,8 +147,8 @@
             this.Controls.Add(this.lblLastname);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Name = "FrmRegister";
+            this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 

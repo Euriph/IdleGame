@@ -12,9 +12,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace IdleGame
 {
-    public partial class Form1 : Form
+    public partial class FrmLogin : Form
     {
-        public Form1()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace IdleGame
                 con.Close();
                 if (dt.Rows.Count > 0)
                 {                  
-                    new Form2().Show();
+                    new FrmMain().Show();
                     this.Hide();
                 }
                 else
@@ -59,7 +59,7 @@ namespace IdleGame
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new FrmRegister().Show();
             this.Hide();
         }
     }

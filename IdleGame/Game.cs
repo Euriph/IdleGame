@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace IdleGame
+{
+    public class Game
+    {
+
+        System.Threading.Thread t;
+        int overallMoneyCount = 0;
+        int clickMoneyCount = 1;
+        int dolar = 0;
+        int level = 1;
+        int workerCount = 0;
+        int workerCost = 10;
+
+        public void IncreaseClickCount()
+        {
+            overallMoneyCount += clickMoneyCount;
+            dolar += clickMoneyCount;
+            CalculateLevel();
+        }
+
+        public string GetLevelText()
+        {
+            return "Level:" + level;
+        }
+        public string GetWrokerText()
+        {
+            return "Worker:" + workerCount;
+        }
+
+        public string GetClickCountText()
+        {
+            return "$:" + dolar.ToString();
+        }
+
+        private void CalculateLevel()
+        {
+            if (overallMoneyCount < 100)
+            {
+                level = 1;
+            }
+            if (overallMoneyCount >= 100)
+            {
+                level = 2;
+                clickMoneyCount = 5;
+            }
+            if (overallMoneyCount > 300)
+            {
+                level = 3;
+                clickMoneyCount = 25;
+            }
+            if (overallMoneyCount > 400)
+            {
+                level = 4;
+                clickMoneyCount = 125;
+            }
+        }
+
+        public void BuyWorker()
+        {
+            int temp = 0;
+            if (dolar >= workerCost)
+            {
+                workerCount++;
+                temp = dolar - workerCost;
+                if (temp >= 0)
+                {
+                    dolar = temp;
+                    workerCost *= 2;
+                    overallMoneyCount += dolar;
+                }
+                t = new System.Threading.Thread(new ThreadStart(DoJob));
+                t.Start();
+            }
+
+
+        }
+        public void DoJob()
+        {
+            while (true)
+            {
+                dolar += 1;
+                overallMoneyCount += 1;
+                CalculateLevel();
+                System.Threading.Thread.Sleep(1000);
+
+            }
+        }
+
+    }
+}

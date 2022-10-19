@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace IdleGame
 {
-    public partial class Form3 : Form
+    public partial class FrmRegister : Form
     {
-        public Form3()
+        public FrmRegister()
         {
             InitializeComponent();
         }
@@ -41,7 +41,7 @@ namespace IdleGame
   
             if (i!=0)  
             {
-                new Form1().Show();
+                new FrmLogin().Show();
                 this.Hide();
             }
         }
