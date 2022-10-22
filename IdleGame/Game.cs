@@ -42,25 +42,13 @@ namespace IdleGame
 
         private void CalculateLevel()
         {
-            if (overallMoneyCount < 100)
-            {
-                level = 1;
-            }
-            if (overallMoneyCount >= 100)
-            {
-                level = 2;
-                clickMoneyCount = 5;
-            }
-            if (overallMoneyCount > 300)
-            {
-                level = 3;
-                clickMoneyCount = 25;
-            }
-            if (overallMoneyCount > 400)
-            {
-                level = 4;
-                clickMoneyCount = 125;
-            }
+
+        if(overallMoneyCount % 100 == 0)
+        {
+            level += 1;
+            clickMoneyCount *= 2;
+        }
+
         }
 
         public void BuyWorker()
